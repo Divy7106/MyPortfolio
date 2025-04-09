@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+
+    <header class="header">
+      <div id = "menuButton">
+        <svg width="50" height="50" viewBox="0 0 100 100" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(20, 25)" stroke="white" stroke-width="9" stroke-linecap="round">
+            <line class="line top" x1="0" y1="0" x2="60" y2="0"/>
+            <line class="line middle" x1="0" y1="20" x2="60" y2="20"/>
+            <line class="line bottom" x1="60" y1="40" x2="0" y2="40"/>
+          </g>
+        </svg>
+      </div>
+      <div class = "menuBar">
+          <a href="" class = "item">Home</a>
+          <a href="" class = "item">About</a>
+          <a href="" class = "item">Contacts</a>
+          <a href="" class = "item">Skills</a>
+      </div>
+    </header>
+
+    <div class="text-container">
+      Hey There, I am Divya.
+    </div>
+
+    <div class="gradient-bg">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
+      <div class="gradients-container">
+        <div class="g1"></div>
+        <div class="g2"></div>
+        <div class="g3"></div>
+        <div class="g4"></div>
+        <div class="g5"></div>
+        <div class="interactive"></div>
+      </div>
+    </div>
+    <script src="/src/main.js"></script>
+  </body>
+</html>
