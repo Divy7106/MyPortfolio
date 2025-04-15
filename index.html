@@ -1,58 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Profile</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/style.css" />
-  </head>
-  <body>
 
-    <header class="header">
-      <div id = "menuButton">
-        <svg width="50" height="50" viewBox="0 0 100 100" fill="white" xmlns="http://www.w3.org/2000/svg">
-          <g transform="translate(20, 25)" stroke="white" stroke-width="9" stroke-linecap="round">
-            <line class="line top" x1="0" y1="0" x2="60" y2="0"/>
-            <line class="line middle" x1="0" y1="20" x2="60" y2="20"/>
-            <line class="line bottom" x1="60" y1="40" x2="0" y2="40"/>
-          </g>
-        </svg>
-      </div>
-      <div class = "menuBar">
-          <a href="" class = "item">Home</a>
-          <a href="" class = "item">About</a>
-          <a href="" class = "item">Contacts</a>
-          <a href="" class = "item">Skills</a>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
 
-    <div class="text-container">
-      Hey There, I am Divya.
+<body>
+  <header class="header">
+    <div id="menuButton">
+      <h1 id = "logo">𝒟</h1>
     </div>
+    <div class="menuBar">
+      <a href="" class="item">Home</a>
+      <a href="#about" class="item">About</a>
+      <a href="#skls" class="item">Education</a>
+      <a href="#skls" class="item">Skills</a>
+      <a href="#foot" class="item">Contacts</a>
+      <a href="#cv" class="item">CV</a>
+      <a href="#ta" class="item">Text Analyzer</a>
+    </div>
+  </header>
 
-    <div class="gradient-bg">
-      <svg xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <filter id="goo">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
-            <feBlend in="SourceGraphic" in2="goo" />
-          </filter>
-        </defs>
+  <div class="text-container">
+    <span>H</span>
+    <span>i</span>
+    <span>&nbsp;</span>
+    <span>t</span>
+    <span>h</span>
+    <span>e</span>
+    <span>r</span>
+    <span>e</span>
+    <span>,</span>
+    <span>&nbsp;</span>
+    <span>I</span>
+    <span>&nbsp;</span>
+    <span>a</span>
+    <span>m</span>
+    <span>&nbsp;</span>
+    <span>D</span>
+    <span>i</span>
+    <span>v</span>
+    <span>y</span>
+    <span>a</span>
+    <span>.</span>
+  </div>
+
+  <div class="description-container">
+    <!-- description -->
+    <p class="description">
+      Student at IIIT Hyderabad | Tech Enthusiast
+    </p>
+    <button id="discover-more" onclick="location.href='#discover'">Discover More</button>
+  </div>
+
+  <div class="gradient-bg">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+      </defs>
+    </svg>
+    <div class="gradients-container">
+      <div class="g1"></div>
+      <div class="g2"></div>
+      <div class="g3"></div>
+      <div class="g4"></div>
+      <div class="g5"></div>
+      <div class="interactive"></div>
+    </div>
+  </div>
+
+  <div class="Profile">
+    <div id="discover"></div>
+    <section class="about">
+      <div class="profile-pic">
+        <img src="/images/WhatsApp Image 2025-04-13 at 1.14.06 PM.jpeg" alt="Profile Picture">
+      </div>
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I am Divya Padariya, a first-year student pursuing Computational Natural Science at IIIT Hyderabad. With strong academic credentials, 
+          I have built a solid foundation in both STEM and language skills. 
+          I am proficient in several programming languages including Python, C++, 
+          and JavaScript, along with database technologies and web development tools.
+        </p>
+        <p>
+          I combine technical aptitude with effective communication skills. 
+          My strengths in time management, public speaking, 
+          and maintaining a positive attitude complement my technical abilities.
+        </p>
+      </div>
+    </section>
+    <section class="birthplace" id = "about">
+
+      <div class="gallery-text">
+        <h2>My Birthplace</h2>
+        <p>
+          I was born in Surat, which is one of the major city of Gujarat. Surat is a lively city on the banks of the
+          Tapi River, known for its textiles and diamond trade.
+          It blends modern growth with rich cultural heritage.
+        </p>
+      </div>
+
+      <div class="gallery">
+        <div class="gallery-item" data-scroll-scale>
+          <img src="/images/dumas-beach-surat-sightseeing-places-to-visit.jpg" alt="Hometown Landscape">
+          <div class="gallery-caption">
+            <h4>Dumas Beach</h4>
+            <p>A scenic urban beach along the Arabian Sea, known for its black sand and mysterious legends.
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-scroll-scale>
+          <img src="/images/The-World-Blog-Charms-of-Surat-Landscape.webp" alt="Local Architecture">
+          <div class="gallery-caption">
+            <h4>Tapi River</h4>
+            <p>A major river in central India that flows westward into the Arabian Sea, nourishing the region around Surat.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-scroll-scale>
+          <img src="images/Image-1-Surat-Diamond-Bourse-India.jpg" alt="Cultural Festival">
+          <div class="gallery-caption">
+            <h4>Diamond Burse</h4>
+            <p> A term in the diamond industry referring to a surface mark caused by a hard impact, affecting a diamond’s clarity.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="edu-hob-skills">
+      <section class="education">
+
+        <h2>Education</h2>
+
+
+        <div class="education-item">
+          <h3>Secondary Education (Class - X)</h3>
+          <span class="education-date">2012 - 2022</span>
+          <p>V. D. Desai Wadiwala, Surat</p>
+          <div class="achievement">
+            <p>Score : 94%</p>
+          </div>
+        </div>
+
+        <div class="education-item">
+          <h3>Higher Secondary School</h3>
+          <span class="education-date">2022 - 2024</span>
+          <p>V. D. Desai Wadiwala, Surat</p>
+          <div class="achievement">
+            <p>Score : 96%</p>
+          </div>
+        </div>
+
+        <div class="education-item">
+          <h3>Computational Natural Science</h3>
+          <span class="education-date">2024 - 2029</span>
+          <p>International Institute of Information Technology, Hyderabad</p>
+          <div class="achievement">
+            <p>
+              Ongoing (Sem 2), Sem 1 SG : 8.8
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="skls">
+        <section class="skills">
+          <h2>Technical Skills</h2>
+          <div class="skills-container">
+            <div>
+              <div class="skill-category">
+                <h3 id='program-head'>Programming Languages</h3>
+
+                <div class="skill-item">
+                  <div class="skill-name">
+                    <span>Python</span>
+                    <span class="skill-level">Intermediate</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 0%;" data-width="60%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-name">
+                    <span>JavaScript</span>
+                    <span class="skill-level">Newbie</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 0%;" data-width="40%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-name">
+                    <span>C</span>
+                    <span class="skill-level">Advanced</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 0%;" data-width="80%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-name">
+                    <span>C++</span>
+                    <span class="skill-level">Intermediate</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 0%;" data-width="65%"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div>
+              <div>
+                <div class="skill-category" id="vcs-skill">
+                  <h3>Version Control Systems</h3>
+
+                  <div class="skill-item">
+                    <div class="skill-name">
+                      <span>Git</span>
+                      <span class="skill-level">Intermediate</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 0%;" data-width="45%"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skill-category">
+                  <h3>Databases</h3>
+
+                  <div class="skill-item">
+                    <div class="skill-name">
+                      <span>MongoDB</span>
+                      <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 0%;" data-width="70%"></div>
+                    </div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="skill-name">
+                      <span>MySQL</span>
+                      <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" style="width: 0%;" data-width="65%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <section class="hobbies">
+          <h2>Hobbies</h2>
+
+          <div class="hobbies-list">
+            <h4>Chess</h4>
+            <h4>Batminton</h4>
+            <h4>Programming</h4>
+            <h4>Music Listening</h4>
+            <h4>Book Reading</h4>
+            <h4>Web Development</h4>
+          </div>
+        </section>
+
+        <section class="hobbies" id = 'soft-skills'>
+          <h2>Soft Skills</h2>
+
+          <div class="hobbies-list">
+            <h4>Public Speaking</h4>
+            <h4>Time management</h4>
+            <h4>Positive attitude</h4>
+          </div>
+        </section>
+      </section>
+    </section>
+    <div id = "skls"></div>
+    <section class="cv-section">
+      <div class="content">
+        <h2>My Curriculum Vitae</h2>
+        <p>Download my complete CV to learn more about my experience, projects, and qualifications.</p>
+        <a target="_blank" href="documents/Divya Padariya - CV.pdf" class="btn cv-btn">Download CV (PDF)</a>
+      </div>
+    </section>
+    <div  id = "cv"></div>
+  </div>
+
+  <div class="text-analyzer-container" id = "ta">
+    <h2>Text Analysis</h2>
+    
+    <div class="input-section animate-on-scroll">
+      <textarea id="textInput" placeholder="Enter or paster your text here ..." rows="10"></textarea>
+      <button id="analyzeButton" class = 'btn'>Analyze Text</button>
+    </div>
+    
+    <div class="results-container">
+      <div class="result-section animate-on-scroll">
+        <h3>Basic Text Statistics</h3>
+        <div id="basicStats" class="stats-grid">
+          <div class="stat-box">
+            <span class="stat-label">Letters:</span>
+            <span class="stat-value" id="letterCount">0</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">Words:</span>
+            <span class="stat-value" id="wordCount">0</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">Spaces:</span>
+            <span class="stat-value" id="spaceCount">0</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">Newlines:</span>
+            <span class="stat-value" id="newlineCount">0</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">Special Symbols:</span>
+            <span class="stat-value" id="specialCount">0</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="result-section animate-on-scroll">
+        <h3>Pronouns</h3>
+        <div id="pronounStats" class="word-stats"></div>
+      </div>
+      
+      <div class="result-section animate-on-scroll">
+        <h3>Prepositions</h3>
+        <div id="prepositionStats" class="word-stats"></div>
+      </div>
+      
+      <div class="result-section animate-on-scroll">
+        <h3>Indefinite Articles</h3>
+        <div id="articleStats" class="word-stats"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer id = "foot">
+    <div class="wave">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
       </svg>
-      <div class="gradients-container">
-        <div class="g1"></div>
-        <div class="g2"></div>
-        <div class="g3"></div>
-        <div class="g4"></div>
-        <div class="g5"></div>
-        <div class="interactive"></div>
-      </div>
     </div>
-    <script src="/src/main.js"></script>
-  </body>
+    
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    
+    <div class="footer-content">
+        <div class="contact-item">
+          <i class="fab fa-instagram" style="scale: 2; margin-right: 5px;"></i>
+          <a href="https://instagram.com/divyamp7106" target="_blank">@divyamp7106</a>
+        </div>
+        
+        <div class="contact-item">
+          <i class="fab fa-github" style="scale: 2; margin-right: 5px;"></i>
+          <a href="https://github.com/Divy7106" target="_blank">github.com/Divy7106</a>
+        </div>
+        
+        <div class="contact-item">
+          <i class="far fa-envelope" style="scale: 2; margin-right: 5px;"></i>
+          <a href="mailto:divyamp7106@gmail.com">divyamp7106@gmail.com</a>
+        </div>
+    </div>
+
+    <div class="copyright">
+      <p>&copy; 2025 Divya. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="src/main.js"></script>
+</body>
 </html>
