@@ -845,7 +845,7 @@ footer {
 .copyright {
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
-  width: 100%px;
+  width: 100%;
   text-align: center;
   margin-top: 40px;
   padding-top: 20px;
@@ -1052,11 +1052,516 @@ button:active {
 }
 
 @media (max-width: 600px) {
+  /* Text Analyzer specific adjustments for mobile */
+  .text-analyzer-container {
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 98%; /* Allow it to be slightly wider on mobile if needed */
+  }
+  .text-analyzer-container textarea {
+    font-size: 16px;
+    min-height: 150px;
+  }
+  .text-analyzer-container textarea::placeholder {
+    font-size: 16px;
+  }
+  /* Assuming the button has id="analyzeButton" or a specific class */
+  /* If general buttons in this container need styling: .text-analyzer-container button */
+  .text-analyzer-container button#analyzeButton { 
+    font-size: 14px;
+    padding: 10px 15px;
+    width: 100%; 
+    box-sizing: border-box; 
+  }
+  .results-container {
+    padding: 10px;
+  }
+  .result-section h3 {
+    font-size: 1.2rem; 
+  }
+
+  /* Adjusting existing rules for stats-grid and its children */
   .stats-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* This was the existing rule, seems fine */
+    /* gap and margin-top will be inherited or can be adjusted if needed */
+  }
+  .stat-box { 
+    padding: 10px; 
+  }
+  .stat-label { 
+    font-size: 0.8rem; 
+  }
+  .stat-value { 
+    font-size: 1.5rem; 
+  }
+
+  /* Adjusting existing rules for word-stats and its children */
+  .word-stats {
+    grid-template-columns: 1fr; /* This was the existing rule, good for mobile */
+    /* gap and margin-top will be inherited or can be adjusted if needed */
+  }
+  .word-item { 
+    padding: 8px 10px; 
+    font-size: 13px; 
+  }
+}
+
+/* Responsive Header and Navigation */
+
+/* For Tablets */
+@media (max-width: 768px) {
+  .header {
+    height: 70px;
+    padding-left: 15px; 
+    padding-right: 15px;
+  }
+
+  #logo {
+    font-size: 48px; /* Original: 60px, Task example: 40px. Using 48px as intermediate */
+  }
+
+  .menuBar {
+    margin-top: 8px; 
+    margin-right: 0; 
+  }
+
+  .item {
+    font-size: 18px; /* Original: 20px, Task example: 18px */
+    padding: 8px;    /* Original: 10px */
+    margin-right: 15px; /* Original: 25px */
+    margin-top: 8px; 
+  }
+
+  /* #menuButton styling can be added here if a hamburger icon is introduced */
+  /* e.g. #menuButton { margin-left: 15px; } */
+
+  .text-container {
+    font-size: 100px;
+    top: 140px; 
+    height: 320px;
+  }
+
+  .description-container {
+    font-size: 32px;
+    margin-top: 15px;
+  }
+
+  #discover-more {
+    font-size: 28px;
+    width: 190px;
+    height: 40px;
+  }
+
+  .Profile {
+    margin-top: 280px; 
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .Profile h2 {
+    font-size: 2rem;
+    text-align: center; /* Center section headings */
+  }
+  .Profile h2::after {
+    left: 50%; /* Center the underline */
+    transform: translateX(-50%);
+    width: 40%; /* Adjust width of underline */
+  }
+
+  /* About Section */
+  .about {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    top: 30px;
+    right: 0;
+    width: 100%;
+    padding: 0 20px; 
+  }
+  .profile-pic {
+    width: 300px; 
+    height: 300px;
+    margin: 0 auto 20px; 
+  }
+  .about-text {
+    font-size: 19px; /* Task: 20px, using 19px for slight reduction */
+    line-height: 1.7;
+    margin-right: 0; 
+    text-align: left; /* Or justify if preferred */
+  }
+
+  /* Birthplace Section */
+  .birthplace { 
+    margin-top: 80px; 
+    padding: 0 20px;
+  }
+  .gallery-text { 
+    font-size: 19px; /* Task: 20px */
+    width: 100%; 
+    margin-left: 0;
+    margin-bottom: 30px; 
+    text-align: left;
+  }
+  .gallery { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px; 
+  }
+  .gallery-item { 
+    height: 350px; 
+  }
+  .gallery-caption { 
+    font-size: 18px; 
+  }
+
+  /* Edu-Hob-Skills Section */
+  .edu-hob-skills { 
+    grid-template-columns: 1fr; 
+    gap: 30px;
+    margin-top: 50px; 
+  }
+  .education { 
+    margin-left: 0; 
+    margin-top: 30px;
+    padding: 0 20px; 
+  }
+  .education-item { 
+    width: 100%; 
+    padding: 20px; 
+  }
+  .education-item h3 {
+    font-size: 1.3rem;
+  }
+  .education-item p, .education-item .achievement { /* Assuming p or .achievement for text */
+    font-size: 0.95rem;
   }
   
+  .skills {
+    margin-top: 10px; /* Reduced from 30px to decrease gap after education */
+    padding: 0 20px;
+  }
+  .skills-container { 
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+  }
+  .skill-category h3 { font-size: 1.2rem; }
+  .skill-name span, .skill-level { font-size: 0.95rem; }
+
+  .hobbies {
+    margin-top: 10px; /* Reduced from 30px */
+    padding: 0 20px;
+  }
+  .hobbies-list { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+  }
+  .hobbies-list h4 { 
+    width: auto; 
+    font-size: 17px; /* Task: 18px */
+    margin: 5px; 
+    padding: 10px 12px;
+  }
+
+  /* CV Section */
+  .cv-section {
+    width: 90%;
+    margin: 80px auto 0 auto; /* Reduced top margin */
+    padding: 50px 20px; /* Reduced padding */
+    font-size: 22px; /* Reduced font size */
+  }
+  .cv-btn {
+    font-size: 1.1rem; /* Reduced font size */
+    padding: 12px 30px; /* Reduced padding */
+  }
+}
+
+/* For Mobile Phones */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    height: auto; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #logo {
+    font-size: 40px; /* Task example: 30px. Using 40px. */
+    margin-bottom: 10px; 
+  }
+
+  .menuBar {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .item {
+    font-size: 18px; /* Task example: 16px. Using 18px for better tap target. */
+    padding: 10px 0; 
+    width: 90%; /* Not full 100% to allow some side visual spacing */
+    text-align: center;
+    margin: 5px 0; /* Vertical margin, horizontal handled by width & text-align */
+  }
+
+  .item:last-child {
+    margin-bottom: 0;
+  }
+
+  .item::after {
+    display: none; /* Remove underline hover effect for mobile */
+  }
+
+  /* #menuButton styling for mobile if used */
+  /* e.g. #menuButton { margin-left: 0; margin-top: 10px; display: block; } */
+
+  /* Specific adjustments for text and description containers for mobile */
+  .text-container {
+    font-size: 70px; 
+    top: 120px; /* Retaining this from previous adjustment, seems reasonable */
+    height: 250px;
+    /* Ensure span animations are checked for appearance */
+  }
+
+  .description-container {
+    font-size: 24px; 
+    white-space: normal; /* Allow text wrapping */
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 15px; /* Adjusted for better spacing */
+  }
+
+  #discover-more {
+    font-size: 24px;
+    width: 180px;
+    height: 40px;
+    margin-left: 0; /* Centered due to parent's align-items */
+    margin-top: 15px; /* Space between description text and button */
+  }
+
+  .Profile {
+    margin-top: 200px; 
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .Profile h2 {
+    font-size: 1.8rem;
+  }
+  /* .Profile h2::after can inherit from tablet or be further adjusted if needed */
+
+  /* About Section */
+  .about {
+    /* grid-template-columns: 1fr; is inherited */
+    gap: 15px; /* Reduced gap */
+    top: 20px;
+    padding: 0 10px; 
+  }
+  .profile-pic {
+    width: 220px; 
+    height: 220px;
+    /* margin: 0 auto 20px; is inherited */
+  }
+  .about-text {
+    font-size: 17px; 
+    line-height: 1.6;
+  }
+
+  /* Birthplace Section */
+  .birthplace { 
+    margin-top: 60px; 
+    padding: 0 10px;
+  }
+  .gallery-text { 
+    font-size: 17px; 
+    /* width: 100%; is inherited */
+    /* margin-left: 0; is inherited */
+    margin-bottom: 20px; /* Reduced margin */
+    text-align: left; /* Overriding task example for consistency */
+  }
+  .gallery { 
+    grid-template-columns: 1fr; 
+    gap: 10px; 
+  }
+  .gallery-item { 
+    height: 300px; /* Or 'auto' if content varies greatly */
+  }
+  .gallery-caption { 
+    font-size: 16px; 
+    padding: 15px; /* Adjust padding for smaller size */
+  }
+
+  /* Edu-Hob-Skills Section */
+  .edu-hob-skills { 
+    /* grid-template-columns: 1fr; is inherited */
+    gap: 20px; /* Reduced gap */
+    margin-top: 40px; 
+  }
+  .education { 
+    /* margin-left: 0; is inherited */
+    margin-top: 20px;
+    padding: 0 10px; 
+  }
+  .education-item { 
+    /* width: 100%; is inherited */
+    padding: 15px; 
+  }
+  .education-item h3 {
+    font-size: 1.2rem;
+  }
+  .education-item p, .education-item .achievement {
+    font-size: 0.9rem;
+  }
+  
+  .skills {
+    /* margin-top: 10px; is inherited */
+    padding: 0 10px;
+  }
+  .skills-container { 
+    /* grid-template-columns: 1fr; is inherited */
+    gap: 15px; 
+  }
+  .skill-category h3 { font-size: 1.1rem; }
+  .skill-name span, .skill-level { font-size: 0.9rem; }
+
+  .hobbies {
+    /* margin-top: 10px; is inherited */
+    padding: 0 10px;
+  }
+  .hobbies-list { 
+    grid-template-columns: 1fr; 
+    gap: 10px; /* Reduced gap */
+  }
+  .hobbies-list h4 { 
+    width: 100%; /* Full width within parent padding */
+    font-size: 16px; 
+    margin: 5px 0; 
+    padding: 8px 10px;
+  }
+
+  /* CV Section */
+  .cv-section {
+    width: 95%; /* Slightly more than tablet to use space */
+    margin: 60px auto 0 auto; 
+    padding: 40px 15px; 
+    font-size: 18px; 
+  }
+  .cv-btn {
+    font-size: 1rem; 
+    padding: 10px 25px; 
+  }
+}
+
+/* Responsive Text Analyzer Section */
+
+/* For Tablets */
+@media (max-width: 768px) {
+  .text-analyzer-container {
+    max-width: 95%;
+    padding: 20px;
+    margin: 25px auto; /* Adjusted margin slightly from example */
+  }
+  .text-analyzer-container textarea {
+    font-size: 18px;
+    min-height: 180px;
+  }
+  .text-analyzer-container textarea::placeholder { /* Ensuring placeholder also scales if needed */
+    font-size: 18px;
+  }
+  .text-analyzer-container button { /* General button style within analyzer for tablet */
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+  .results-container {
+    padding: 15px;
+  }
+  .result-section h3 { /* Assuming h3 is used for titles like "Basic Text Statistics" */
+    font-size: 1.4rem; 
+  }
+  .stats-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); 
+    gap: 12px; /* Adjusted gap */
+  }
+  .stat-box { 
+    padding: 15px; 
+  }
+  .stat-label { 
+    font-size: 0.9rem; 
+  }
+  .stat-value { 
+    font-size: 1.8rem; 
+  }
+
   .word-stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
+    gap: 10px; 
+  }
+  .word-item { 
+    padding: 8px 12px; 
+    font-size: 14px; 
+  }
+}
+
+/* Responsive Footer Section */
+
+/* For Tablets */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 30px;
+    gap: 0; /* Reset gap, manage spacing with margins on children */
+  }
+  .footer-contacts {
+    flex-direction: column; /* Stack contact items if not already */
+    align-items: center; /* Center them */
+    gap: 15px; /* Space between stacked contact items */
+    width: 100%; /* Ensure it takes up space to center content */
+    margin-bottom: 20px; /* Space before copyright */
+  }
+  .contact-item {
+    font-size: 1rem; /* Default is Poppins 500, ~16px */
+    /* margin-bottom is handled by footer-contacts gap */
+  }
+  .contact-item i {
+    font-size: 22px; /* Slightly smaller icons */
+  }
+  .copyright {
+    font-size: 18px; 
+    padding-top: 15px;
+    margin-top: 30px;
+    text-align: center; /* Ensure it stays centered */
+  }
+  .wave svg {
+    height: 40px; 
+  }
+}
+
+/* For Mobile Phones */
+@media (max-width: 600px) {
+  .footer-content {
+    padding: 30px 15px 20px; 
+  }
+  .footer-contacts {
+    gap: 12px; /* Further reduce gap between contact items */
+    margin-bottom: 15px; /* Reduce space before copyright */
+  }
+  .contact-item {
+    font-size: 0.9rem; 
+    /* flex-direction: row; */ /* Ensure icon and text are row */
+    /* align-items: center; */ /* Vertically align icon and text */
+    /* width: auto; */ /* Let content define width */
+  }
+  .contact-item i {
+    font-size: 20px; /* Further reduce icon size */
+    /* margin-right: 8px; */ /* Gap on parent .contact-item is 10px, this might not be needed or can be forced */
+  }
+  .copyright {
+    font-size: 16px; 
+    margin-top: 20px;
+    padding-top: 10px;
+  }
+  .wave svg {
+    height: 35px; 
   }
 }
